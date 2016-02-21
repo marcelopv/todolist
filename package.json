@@ -1,0 +1,23 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "This is a to do list project built in angular js framework.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/.bin/webpack-dev-server --content-base dist"
+  },
+  "keywords": [
+    "angularjs",
+    "webpack"
+  ],
+  "author": "Marcelo Vargas",
+  "devDependencies": {
+    "angular": "^1.5.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
