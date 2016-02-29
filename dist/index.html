@@ -3,10 +3,21 @@
   <head>
     <script src="bundle.js"></script>
   </head>
-  <body ng-controller="TodoListCtrl">
-    <div class="container-fluid">
-      <h1>TO DO List</h1>
-      <button type="button" class="btn btn-primary" ng-click="addItem()">Add</button>
+  <body class="container-fluid">
+    <h1>TO DO List</h1>
+    <div ng-controller="TodoListCtrl as todoList">
+      <ul>
+        <li ng-repeat="todo in todoList.todos">
+          <label>
+            <input type="checkbox" ng-model="todo.done">
+            <span>{{todo.text}}</span>
+          </label>
+        </li>
+      </ul>
+      <form ng-submit="todoList.addTodo()">
+        <input type="text" ng-model="todoList.todoText">
+        <input class="btn btn-primary btn-sm" type="submit" value="add">
+      </form>
     </div>
   </body>
 </html>
