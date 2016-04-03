@@ -1,6 +1,6 @@
-var todolistApp = angular.module('todolistApp', []);
+var todolistControllers = angular.module('todolistControllers', []);
 
-todolistApp.controller('TodoListCtrl', function(){
+todolistControllers.controller('TodoListCtrl', function(){
 
   var todoList = this;
 
