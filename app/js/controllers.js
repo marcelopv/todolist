@@ -15,3 +15,11 @@ todolistControllers.controller('TodoListCtrl', function(){
   };
 
 });
+
+todolistControllers.controller('IndexController', function(){
+
+  var index = this;
+
+  index.mensagem = 'ola';
+  
+});
