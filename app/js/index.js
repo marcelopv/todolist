@@ -12,11 +12,15 @@ todolistApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/test', {
-        template: require('raw!./test.html'),
+        template: require('raw!../partials/test.html'),
         controller: 'IndexController'
       }).
+      when('/todolist', {
+        template: require('raw!../partials/todolist.html'),
+        controller: 'TodoListCtrl'
+      }).
       otherwise({
-        redirectTo: '/phones'
+        redirectTo: '/'
       });
   }]);
 
