@@ -1,17 +1,15 @@
 <h1>TO DO List</h1>
-<div ng-controller="TodoListCtrl as todoList">
+<div ng-controller="TodoListCtrl">
   <ul>
-    <li ng-repeat="todo in todoList.todos">
+    <li ng-repeat="todo in todos">
       <label>
         <input type="checkbox" ng-model="todo.done">
         <span>{{todo.text}}</span>
       </label>
     </li>
   </ul>
-  <form ng-submit="todoList.addTodo()">
-    <input type="text" ng-model="todoList.todoText">
+  <form ng-submit="addTodo()">
+    <input type="text" ng-model="todoText">
     <input class="btn btn-primary btn-sm" type="submit" value="add">
   </form>
-
-
 </div>
