@@ -17,11 +17,11 @@ todolistApp.config(['$routeProvider',
       }).
       when('/todolist', {
         template: require('raw!../partials/todolist.html'),
-        controller: 'TodoListCtrl'
+        controllerAs: 'TodoListCtrl'
       }).
       otherwise({
         redirectTo: '/'
       });
   }]);
 
-require('./controllers.js');
+require('./controllers/todolist-ctrl.js');
