@@ -1,6 +1,6 @@
 var todolistControllers = angular.module('todolistControllers', []);
 
-todolistControllers.controller('TodoListCtrl', ['$scope', function($scope){
+todolistControllers.controller('TodoListCtrl', ['$scope', function ($scope){
 
   $scope.todos = [
       {text:'learn angular', done:false},

@@ -4,7 +4,8 @@
   "description": "This is a to do list project built in angular js framework.",
   "main": "index.js",
   "scripts": {
-    "start": "node node_modules/.bin/webpack-dev-server --content-base dist"
+    "start": "node node_modules/.bin/webpack-dev-server --content-base dist",
+    "test": "node node_modules/karma/bin/karma start karma.config.js"
   },
   "keywords": [
     "angularjs",
@@ -13,8 +14,14 @@
   "author": "Marcelo Vargas",
   "devDependencies": {
     "angular": "^1.5.0",
+    "angular-mocks": "^1.5.5",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8",
+    "karma-webpack": "^1.7.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.13",
