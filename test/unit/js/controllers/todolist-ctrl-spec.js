@@ -13,11 +13,11 @@ describe('TodolistCtrl', function(){
   }));
 
   describe('when initialize', function(){
-    it('should have two todo items', function(){
+    it('should have empty todo items', function(){
       var $scope = {};
       var controller = $controller('TodoListCtrl', { $scope: $scope });
 
-      expect($scope.todos.length).toBe(2);
+      expect($scope.todos.length).toBe(0);
     });
   });
 
@@ -28,7 +28,7 @@ describe('TodolistCtrl', function(){
 
       $scope.addTodo();
 
-      expect($scope.todos.length).toBe(3);
+      expect($scope.todos.length).toBe(1);
     });
   });
 });
