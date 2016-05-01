@@ -2,7 +2,7 @@ var angular = require('angular');
 require('angular-mocks');
 require('./../../../../app/js/controllers/todolist-ctrl.js');
 
-describe('todolistCtrl', function(){
+describe('TodolistCtrl', function(){
 
   beforeEach(angular.mock.module('todolistControllers'));
 
@@ -12,10 +12,23 @@ describe('todolistCtrl', function(){
     $controller = _$controller_;
   }));
 
-  it('should have two todos when initialize', function(){
-    var $scope = {};
-    var controller = $controller('TodoListCtrl', { $scope: $scope });
+  describe('when initialize', function(){
+    it('should have two todo items', function(){
+      var $scope = {};
+      var controller = $controller('TodoListCtrl', { $scope: $scope });
 
-    expect($scope.todos.length).toBe(2);
+      expect($scope.todos.length).toBe(2);
+    });
+  });
+
+  describe('when add a todo item', function(){
+    it('should increment the list', function(){
+      var $scope = {todoText: 'learn mongodb', done: false};
+      var controller = $controller('TodoListCtrl', { $scope: $scope });
+
+      $scope.addTodo();
+
+      expect($scope.todos.length).toBe(3);
+    });
   });
 });
