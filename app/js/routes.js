@@ -1,17 +1,15 @@
-var todolistApp = angular.module('todolistApp', ['todolistControllers', 'ngRoute']);
-
-todolistApp.config(['$routeProvider',
+angular.module('todolistApp').config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/test', {
-        template: require('raw!../partials/test.html'),
-        controller: 'IndexController'
+      when('/home', {
+        template: require('raw!../partials/home.html'),
+        controller: 'HomeController'
       }).
       when('/todolist', {
         template: require('raw!../partials/todolist.html'),
-        controllerAs: 'TodoListCtrl'
+        controllerAs: 'TodoListController'
       }).
       otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
   }]);

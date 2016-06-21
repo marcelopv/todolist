@@ -1,6 +1,4 @@
-var todolistControllers = angular.module('todolistControllers', []);
-
-todolistControllers.controller('TodoListCtrl', ['$scope', function ($scope){
+angular.module('todolistApp').controller('TodoListController', ['$scope', function ($scope){
 
   $scope.todos = [];
 
@@ -8,11 +6,5 @@ todolistControllers.controller('TodoListCtrl', ['$scope', function ($scope){
     $scope.todos.push({text:$scope.todoText, done:false});
     $scope.todoText = '';
   };
-
-}]);
-
-todolistControllers.controller('IndexController', ['$scope', function($scope){
-
-  $scope.mensagem = 'ola';
 
 }]);

@@ -1,10 +1,12 @@
-var angular = require('angular');
+require('angular');
 require('angular-mocks');
+require('angular-route');
+require('./../../../../app/js/app.js');
 require('./../../../../app/js/controllers/todolist-ctrl.js');
 
-describe('TodolistCtrl', function(){
+describe('TodoListController', function(){
 
-  beforeEach(angular.mock.module('todolistControllers'));
+  beforeEach(angular.mock.module('todolistApp'));
 
   var $controller;
 
@@ -15,7 +17,7 @@ describe('TodolistCtrl', function(){
   describe('when initialize', function(){
     it('should have empty todo items', function(){
       var $scope = {};
-      var controller = $controller('TodoListCtrl', { $scope: $scope });
+      var controller = $controller('TodoListController', { $scope: $scope });
 
       expect($scope.todos.length).toBe(0);
     });
@@ -24,7 +26,7 @@ describe('TodolistCtrl', function(){
   describe('when add a todo item', function(){
     it('should increment the list', function(){
       var $scope = {todoText: 'learn mongodb', done: false};
-      var controller = $controller('TodoListCtrl', { $scope: $scope });
+      var controller = $controller('TodoListController', { $scope: $scope });
 
       $scope.addTodo();
 
